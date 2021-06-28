@@ -37,11 +37,11 @@ def fade(colour1, colour2, percent):
 def rollcall_cycle(wait):
     for j in range(len(gokai_colours)):
         for i in range(10):
-            color1 = gokai_colours[j]
+            colour1 = gokai_colours[j]
             if j == 5:
-                color2 = (255,255,255)
+                colour2 = (255,255,255)
             else:
-                color2 = gokai_colours[(j+1)]
+                colour2 = gokai_colours[(j+1)]
             percent = i*0.1   # 0.1*100 so 10% increments between colours
             strip.fill((fade(colour1,colour2,percent)))
             strip.show()
